@@ -16,6 +16,7 @@ const MovieDetail = () => {
         }
 
         const movieData = await response.json();
+        console.log(movieData)
         setMovie(movieData);
       } catch (err) {
         setError("Erreur lors de la récupération du film.");
@@ -32,6 +33,9 @@ const MovieDetail = () => {
   if (!movie) {
     return <div>Chargement...</div>;
   }
+
+  // Maintenant tu accèdes aux données depuis l'objet `movie`
+  const { title, year, genres, description, posterUrl, trailerUrl, rating } = movie;
 
   return (
     <div className="movie-card">
@@ -123,4 +127,5 @@ const MovieDetailWithID = ({ movieId }) => {
   );
 };
 
-export { MovieDetail, MovieDetailWithID };
+export default MovieDetail;
+export { MovieDetailWithID };
