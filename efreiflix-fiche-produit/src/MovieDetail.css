@@ -13,13 +13,14 @@ html, body {
   position: relative;
   background-size: cover;
   background-position: center;
-  width: 100%;
+  background-color: white;
+  width: 90%;
   max-width: 1200px;
   min-height: 400px;
   margin: 30px auto;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #141414;
+  /*background-color: #141414;*/
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -31,6 +32,11 @@ html, body {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, rgba(20,20,20,0) 40%, rgba(20,20,20,0.9) 100%);
+}
+
+.image-detail-film {
+  width: 100%;
+  height: 100%;
 }
 
 /* Boutons d'actions (exemple pour partage/suivi) */
@@ -106,6 +112,8 @@ html, body {
 
 .movie-card__button {
   width: auto;
+  margin-left: auto;
+  display: flex;
 }
 
 /* Responsive */

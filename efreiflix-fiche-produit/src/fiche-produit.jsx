@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './MovieDetail.css';  // Assurez-vous que vous avez un fichier CSS pour le style
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 
 // Fonction de Démonstration (ID fixe 1)
 const MovieDetail = () => {
@@ -38,16 +40,18 @@ const MovieDetail = () => {
 
   return (
     <div className="movie-card">
-      <div className="movie-cardoverlay"></div>
+      <div className="movie-cardoverlay">
+        <img src={movie.posterUrl} className="image-detail-film"  alt={movie.posterUrl}/>
+      </div>
       <div className="movie-cardshare">
         <button className="movie-cardicon">
-          <i className="material-icons">&#xe87d;</i>
+          <ThumbUpIcon/>
         </button>
         <button className="movie-cardicon">
-          <i className="material-icons">&#xe253;</i>
+          <ThumbDownIcon/>
         </button>
         <button className="movie-cardicon">
-          <i className="material-icons">&#xe80d;</i>
+          <span> {movie.rating} / 5</span>
         </button>
       </div>
       <div className="movie-cardcontent">
