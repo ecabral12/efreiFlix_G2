@@ -34,7 +34,6 @@ const MovieDetail = () => {
     return <div>Chargement...</div>;
   }
 
-  // Maintenant tu accèdes aux données depuis l'objet `movie`
   const { title, year, genres, description, posterUrl, trailerUrl, rating } = movie;
 
   return (
@@ -57,7 +56,8 @@ const MovieDetail = () => {
           <h4 className="movie-cardinfo">{movie.info}</h4>
         </div>
         <p className="movie-carddesc">{movie.description}</p>
-        <button className="btn btn-outline movie-card__button" type="button">
+        <button className="btn btn-outline movie-card__button" type="button" onClick={
+          () => window.open(movie.trailerUrl, '_blank')}>
           Watch Trailer
         </button>
       </div>
@@ -119,7 +119,8 @@ const MovieDetailWithID = ({ movieId }) => {
           <h4 className="movie-cardinfo">{movie.info}</h4>
         </div>
         <p className="movie-carddesc">{movie.description}</p>
-        <button className="btn btn-outline movie-card__button" type="button">
+        <button className="btn btn-outline movie-card__button" type="button" onClick={
+          () => window.open(movie.trailerUrl, '_blank')}>
           Watch Trailer
         </button>
       </div>
