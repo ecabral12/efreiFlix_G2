@@ -1,0 +1,32 @@
+.comment-list {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .comment-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .comment-text {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .comment-timestamp {
+    font-size: 0.8rem;
+    color: #888;
+  }
+  

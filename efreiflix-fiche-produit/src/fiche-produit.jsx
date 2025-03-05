@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './MovieDetail.css';  // Assurez-vous que vous avez un fichier CSS pour le style
+import CommentList from "./CommentList";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 
@@ -65,6 +66,7 @@ const MovieDetail = () => {
           Watch Trailer
         </button>
       </div>
+      <CommentList movieId={1} />
     </div>
   );
 };
