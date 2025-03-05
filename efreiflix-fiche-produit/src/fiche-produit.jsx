@@ -40,6 +40,7 @@ const MovieDetail = () => {
   const { title, year, genres, description, posterUrl, trailerUrl, rating } = movie;
 
   return (
+      <div>
     <div className="movie-card">
       <div className="movie-cardoverlay">
         <img src={movie.posterUrl} className="image-detail-film"  alt={movie.posterUrl}/>
@@ -66,8 +67,9 @@ const MovieDetail = () => {
           Watch Trailer
         </button>
       </div>
-      <CommentList movieId={1} />
     </div>
+  <CommentList movieId={1} />
+      </div>
   );
 };
 

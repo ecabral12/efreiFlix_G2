@@ -40,15 +40,18 @@ const CommentList = ({ movieId }) => {
 
   return (
     <div className="comment-list">
-      {comments.length === 0 ? (  // Vérifier ici plutôt que dans `if (comments.length == 0)`
+        <h4>Commentaire : </h4>
+      {comments.length === 0 ? (
         <div>Aucun commentaire pour ce film.</div>
       ) : (
         comments.map((comment) => (
-          <div key={comment.id} className="comment-card">
-            <h5 className="comment-author">{comment.author}</h5>
-            <p className="comment-text">{comment.text}</p>
-            <span className="comment-timestamp">{new Date(comment.timestamp).toLocaleString()}</span>
-          </div>
+            <div>
+                <div key={comment.id} className="comment-card">
+                    <h5 className="comment-author">{comment.author}</h5>
+                    <p className="comment-text">{comment.text}</p>
+                    <span className="comment-timestamp">{new Date(comment.timestamp).toLocaleString()}</span>
+                </div>
+            </div>
         ))
       )}
     </div>
