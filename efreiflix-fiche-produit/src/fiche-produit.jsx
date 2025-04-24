@@ -14,7 +14,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await fetch("http://localhost:2066/movies/2");
+        const response = await fetch("http://localhost:2066/movies/6");
         
         if (!response.ok) {
           throw new Error("Film non trouvé");
@@ -24,7 +24,7 @@ const MovieDetail = () => {
 
         // Fetch poster from TMDb API
         const tmdbRes = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(movieData.title)}`);
-        const posterPath = tmdbRes.data.results[0]?.poster_path;
+        const posterPath = tmdbRes.data.results[0]?.backdrop_path;
         const posterUrl = posterPath ? `http://image.tmdb.org/t/p/w500/${posterPath}` : null;
 
         setMovie({ ...movieData, posterUrl });
@@ -51,8 +51,6 @@ const MovieDetail = () => {
           )}
         </div>
         <div className="movie-cardshare">
-          <button className="movie-cardicon"><ThumbUpIcon /></button>
-          <button className="movie-cardicon"><ThumbDownIcon /></button>
           <button className="movie-cardicon"><span>{movie.rating} / 5</span></button>
         </div>
         <div className="movie-cardcontent">

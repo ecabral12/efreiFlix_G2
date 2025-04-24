@@ -40,7 +40,7 @@ const CommentList = ({ movieId }) => {
 
   return (
     <div className="comment-list">
-        <h4>Commentaire : </h4>
+        <h4>Commentaires : </h4>
       {comments.length === 0 ? (
         <div>Aucun commentaire pour ce film.</div>
       ) : (
